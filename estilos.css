@@ -1,0 +1,144 @@
+html {
+	scroll-behavior: smooth;
+}
+
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+body {
+	background: #f2f2f2;
+	font-family: 'Roboto', sans-serif;
+}
+
+a {
+	text-decoration: none;
+}
+
+.hero {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	height: calc(100vh - 80px);
+}
+
+.hero h1 {
+	font-size: 80px;
+}
+
+.hero p {
+	font-size: 30px;
+	text-transform: uppercase;
+	color: #113CFC;
+}
+
+
+nav {
+	background: #fff;
+	height: 80px;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+	display: flex;
+
+	position: sticky;
+	top: 0;
+
+	/* Todo lo que quede fuera del menu lo ocultamos: */
+	overflow: hidden;
+}
+
+nav a {
+	/* Nos aseguramos que todos los elementos tengan el mismo tamaño */
+	flex: 1; 
+
+	height: 100%;
+	text-transform: uppercase;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	text-align: center;
+	color: #000;
+	transition: .2s ease-in-out all;
+	font-weight: 500;
+}
+
+nav a:hover {
+	background: #f0f0f0;
+}
+
+nav .indicador {
+	/* Vamos a modificar el tamaño con JS para que calcule depende del dispositivo */
+	width: 0;
+
+	height: 7px;
+	background: #113cfc;
+
+	/* Posicionamos el indicador al inicio */
+	position: absolute;
+	bottom: 0px;
+
+	/* Al cambiar de posicion se va a trasladar */
+	transition: .3s	ease-in-out all;
+
+	/* Ponemos el indicador fuera de la pantalla para que tenga un efecto de entrada al iniciar */
+	/* transform: translate(-500px); */
+
+
+}
+
+.seccion {
+	min-height: 100vh;
+	max-width: 800px;
+	width: 90%;
+	margin: auto;
+
+	padding-top: 120px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+
+}
+
+.seccion .card {
+	background: #fff;
+	height: 90%;
+	padding: 40px;
+	border-radius: 5px;
+	box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.seccion h1 {
+	font-size: 48px;
+	margin-bottom: 20px;
+}
+
+.seccion p {
+	line-height: 38px;
+	margin-bottom: 40px;
+	color: #494949;
+	font-size: 20px;
+}
+
+.seccion img {
+	width: 100%;
+	vertical-align: top;
+	margin-bottom: 20px;
+}
+
+
+
+@media screen and (max-width: 800px) {
+	nav a {
+		font-size: 14px;
+		padding: 5px;
+	}
+}
+
+@media screen and (max-width: 450px) {
+	nav a {
+		font-size: 12px;
+	}
+}
